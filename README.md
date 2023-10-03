@@ -1,6 +1,12 @@
 # Editor-de-Memes
-Editor de memes
+
+
+
 [![Captura-de-pantalla-2023-10-03-193329.png](https://i.postimg.cc/651XhKpw/Captura-de-pantalla-2023-10-03-193329.png)](https://postimg.cc/9rTKWv9N)
+
+
+
+
  Consigna
 En este proyecto vas a estar realizando un editor para generar memes. Crearás una aplicación con la que podrás manipular el texto y la imagen de tu meme y usarás JavaScript para modificar dinámicamente su contenido y sus propiedades. Cuando quedes conforme, podrás descargar tu meme para usarlo o compartilo donde quieras.
 

@@ -18,7 +18,12 @@ const $ = (selector) => document.querySelector(selector)
 
 //EVENTOS
 
-//Filtros
+//url image
+$("#url-image") .addEventListener("input", (e) => {
+    $(".url-image-container").style.backgroundImage = `url(${e.target.value}})`
+})
+
+//Filter
 //brillo
 $("#brightness") . addEventListener("input", (e) => {
     $(".image-container").style.filter = `brightness(${e.target.value})`

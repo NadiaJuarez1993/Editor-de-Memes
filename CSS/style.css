@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body.dark-theme {
+    --color-header: #191e2b;
+    --color-background: #30343f;
+    --color-panel: #252935;
+    --color-boton-default: #393e49;
+    --color-boton-default-hover: #4e5565;
+    --color-text: #ffffff;
+    --font-primary: 'Open Sans', sans-serif;
+    --border-radius: 3px;
+} */
+
+.header-container{
+    background-color:#30343f ;
+    background-color: blueviolet;
+
+}

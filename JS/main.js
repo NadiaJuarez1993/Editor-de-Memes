@@ -6,7 +6,7 @@ const $ = (selector) => document.querySelector(selector)
 
 //filter
 const allFiltersMeme = () =>{
-    $(".image-filter").style.filter = `brightness(${$("#brightness")}.value) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value )`
+    $("#image-filter").style.filter = `brightness(${$("#brightness")}.value) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value )`
 }
 
 // const restartText = () =>{
@@ -26,14 +26,13 @@ const allFiltersMeme = () =>{
 //EVENTOS
 
 //text
- $("#top-text-input").addEventListener ("input", (e) => {
+$("#top-text-input").addEventListener ("input", (e) => {
     $("#upper-text").innerText = e.target.value
 })
 
 $("#lower-text-input").addEventListener ("input", (e) => {
     $("#down-text").innerText = e.target.value
 })
-
 
 //url image
 $("#url-image") .addEventListener("input", (e) => {
@@ -84,8 +83,18 @@ $("#meme-background").addEventListener("input",(e) =>{
     $("#hue-rotation").value = "0deg"
     $("#saturation").value = "100%"
     $("#invert").value = "1"
-    $(".url-image-container").stile.filter = "none"
+    $("#image-filter").stile.filter = "none"
 
 })
+
+
+
+
+
+
+
+
+
+
 
 

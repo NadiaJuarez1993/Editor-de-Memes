@@ -34,6 +34,25 @@ $("#lower-text-input").addEventListener ("input", (e) => {
     $("#down-text").innerText = e.target.value
 })
 
+//without text
+$("#displayTopText").addEventListener("input",(e) => {
+    if(e.target.checked){
+        $("#upper-text").style.display = "none"
+    } else{
+        $("#upper-text").style.display = "block"
+    }
+})
+
+$("#displayLowerText").addEventListener("input",(e) => {
+    if(e.target.checked){
+        $("#down-text").style.display = "none"
+    } else{
+        $("#down-text").style.display = "block"
+    }
+})
+
+
+
 //font
 $("#font").addEventListener("input", (e) =>{
     $(".meme-text").style.fontFamily = e.target.value
@@ -44,6 +63,8 @@ $("#font-size").addEventListener("input" , (e) => {
     $(".meme-text").style.fontSize = `${e.target.value}rem`
 
 })
+
+
 
 //url image
 $("#url-image") .addEventListener("input", (e) => {

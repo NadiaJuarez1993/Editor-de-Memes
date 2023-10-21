@@ -21,6 +21,11 @@ const allFiltersMeme = () =>{
 
 //EVENTOS
 
+//text
+$(".upper-text").addEventListener( => {
+
+})
+
 //url image
 $("#url-image") .addEventListener("input", (e) => {
     $("#image-container").style.backgroundImage = `url(${e.target.value})`

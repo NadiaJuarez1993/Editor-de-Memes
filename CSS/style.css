@@ -136,7 +136,6 @@ h2{
     font-size: 2rem;
 }
 
-#
 
 label {
     display: flex;
@@ -149,6 +148,8 @@ label {
 }
 
 input{
+    width: 12rem;
+    height: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,6 +157,11 @@ input{
     margin: 1rem 1rem;
     padding: 1rem 1rem;
     text-align: center;
+    background-color: var(--background-boton-default);
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    color: var(--background-text);
+    
 }
 
 

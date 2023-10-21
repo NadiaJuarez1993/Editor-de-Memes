@@ -51,6 +51,15 @@ $("#displayLowerText").addEventListener("input",(e) => {
     }
 })
 
+//transparent Background
+$("#transparentBackground").addEventListener("input",(e) => {
+    if(e.target.checked){
+        $("#down-text").style.display= "none"
+        $("#image-filter").style.backgroundImage = "transparent"
+    } else{
+        $("#down-text").style.display = "block"
+    }
+})
 
 
 
@@ -86,9 +95,37 @@ $("#color-text").addEventListener("input",(e) =>{
 
 //text aline
 $("#text-aline-left").addEventListener("click",(e) =>{
-    $(".meme-top-text").style.textAline = `${e.target.value}left`
+    $(".meme-top-text").style.textAlign = "left"
 
 })
+
+$("#text-aline-left").addEventListener("click",(e) =>{
+    $(".meme-down-text").style.textAlign = "left"
+
+})
+
+$("#text-aline-center").addEventListener("click",(e) =>{
+    $(".meme-top-text").style.textAlign = "center"
+
+})
+
+$("#text-aline-center").addEventListener("click",(e) =>{
+    $(".meme-down-text").style.textAlign = "center"
+
+})
+
+$("#text-aline-right").addEventListener("click",(e) =>{
+    $(".meme-top-text").style.textAlign = "right"
+
+})
+
+$("#text-aline-right").addEventListener("click",(e) =>{
+    $(".meme-down-text").style.textAlign = "right"
+
+})
+
+
+
 
 
 

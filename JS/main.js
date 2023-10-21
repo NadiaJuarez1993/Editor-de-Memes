@@ -34,6 +34,11 @@ $("#lower-text-input").addEventListener ("input", (e) => {
     $("#down-text").innerText = e.target.value
 })
 
+//font
+$("#font").addEventListener("input", (e) =>{
+    $(".meme-text").style.fontFamily = e.target.value
+})
+
 //url image
 $("#url-image") .addEventListener("input", (e) => {
     $("#image-container").style.backgroundImage = `url(${e.target.value})`

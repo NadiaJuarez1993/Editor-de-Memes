@@ -8,6 +8,10 @@ const $ = (selector) => document.querySelector(selector)
 
 //FUNCIONES
 
+//filter
+const allFiltersMeme = () =>{
+    $(".image-container").style.filter = `brightness(${$("#brightness")}.value ) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}%) invert(${$("#invert")}) `
+}
 
 
 
@@ -25,47 +29,29 @@ $("#url-image") .addEventListener("input", (e) => {
 
 //Filter
 //brillo
-$("#brightness") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `brightness(${e.target.value})`
-})
+$("#brightness") . addEventListener("input", allFiltersMeme)
 
 //opacidad
-$("#opacity") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `opacity(${e.target.value})`
-})
+$("#opacity") . addEventListener("input", allFiltersMeme)
 
 //Contraste
-$("#contrast") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `contrast(${e.target.value}%)`
-})
+$("#contrast") . addEventListener("input", allFiltersMeme)
 
 //blur
-$("#blur") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `blur(${e.target.value}px)`
-})
+$("#blur") . addEventListener("input", allFiltersMeme)
 
 //escala de grises
-$("#grayscale") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `grayscale(${e.target.value}%)`
-})
+$("#grayscale") . addEventListener("input", allFiltersMeme)
 
 //sepia
-$("#sepia") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `sepia(${e.target.value}%)`
-})
+$("#sepia") . addEventListener("input", allFiltersMeme)
 
 //hue
-$("#hue-rotation") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `hue-rotation(${e.target.value}deg)`
-})
+$("#hue-rotation") . addEventListener("input", allFiltersMeme)
 
 //saturacion
-$("#saturation") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `saturation(${e.target.value}%)`
-})
+$("#saturation") . addEventListener("input", allFiltersMeme)
 
 //negativo
-$("#invert") . addEventListener("input", (e) => {
-    $(".image-container").style.filter = `invert(${e.target.value})`
-})
+$("#invert") . addEventListener("input", allFiltersMeme)
 

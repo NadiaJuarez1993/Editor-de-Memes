@@ -53,6 +53,8 @@ $("#displayLowerText").addEventListener("input",(e) => {
 
 
 
+
+
 //font
 $("#font").addEventListener("input", (e) =>{
     $(".meme-top-text").style.fontFamily = e.target.value
@@ -80,6 +82,12 @@ $("#color-text").addEventListener("input",(e) =>{
 
 $("#color-text").addEventListener("input",(e) =>{
     $(".meme-down-text").style.color = e.target.value
+})
+
+//text aline
+$("#text-aline-left").addEventListener("click",(e) =>{
+    $(".meme-top-text").style.textAline = `${e.target.value}left`
+
 })
 
 

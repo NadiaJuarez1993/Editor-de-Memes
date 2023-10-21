@@ -9,7 +9,7 @@
     --background-text: #ffffff;
     --color-title-panel: rgb(33 33 33 / 80%);
     --color-title-control: rgb(33 33 33 / 70%);
-    --border-radius: 3px;
+    --border-radius: 8px;
 } 
 
 
@@ -161,7 +161,17 @@ input{
     border-radius: var(--border-radius);
     font-size: 1.5rem;
     color: var(--background-text);
-    
+
+}
+
+.icon{
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+
+
 }
 
 

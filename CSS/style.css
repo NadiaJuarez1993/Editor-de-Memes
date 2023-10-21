@@ -1,0 +1,117 @@
+
+
+:root {
+    --background-header: #191e2b;
+    --background-background: #30343f;
+    --background-panel: #252935;
+    --background-boton-default: #393e49;
+    --background-boton-default-hover: #4e5565;
+    --background-text: #ffffff;
+    --color-title-panel: rgb(33 33 33 / 80%);
+    --color-title-control: rgb(33 33 33 / 70%);
+    --border-radius: 3px;
+} 
+
+
+[data-theme="light-theme"] {
+    --background-header: #e0e0e0;
+    --background-background: #eeeeee;
+    --background-panel: #fafafa;
+    --background-boton-default: #e0e0e0;
+    --background-boton-default-hover: #bdbdbd;
+    --background-text: #424242;
+    --color-title-panel: rgb(33 33 33 / 80%);
+    --color-title-control: rgb(33 33 33 / 70%);
+    --border-radius: 3px;
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.header-container {
+    background-color: var(--background-header);
+    color: var(--background-text);
+    font-style: var(--background-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 9rem;
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.button  {
+    height: 2rem;
+    margin-top: 1rem;
+    margin: 1rem;
+    background-color: var(--background-header);
+    color: var(--background-text);
+    font-size: 30px;
+    border: 0;
+    cursor: pointer;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    /* display: block; */
+   
+   
+}
+
+.button:hover{
+    background-color: var(--background-boton-default-hover);
+    height: 3.5rem;
+    border-radius: var(--border-radius);
+}
+
+.meme-container{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: var(--background-background);
+}
+
+.image-container{
+    height: 80vh;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.upper-text , .lower-text {
+    background-color: var(--background-text);
+    height:10vh ;
+    width: 50vw;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.button-dowload{
+    background-color: green ;
+    height: 10vh;
+    width: 15vw;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--background-text);
+    /* border-radius: var(--border-radius); */
+    border-radius: 10px;
+   
+}
+
+
+

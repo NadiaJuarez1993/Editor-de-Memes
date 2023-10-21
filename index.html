@@ -3,96 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <script src="https://kit.fontawesome.com/a2efbdb0cc.js" crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
-<body class="dark-theme">
+<body >
     <header class="header-container">
         <h1>Generador de memes</h1>
+        
        <div class="button-container">
 
-        <button class="button button--text">
-            <i class="fa-regular fa-file-image" style="color: #000000;"></i> Imagen
-        </button>
+           <button class="button button--text">
+            <i class="fa-regular fa-file-image" style="color: #f0eaea;"></i> Imagen
+         </button>
 
-        <button class="button button--text">
-            <i class="fa-solid fa-font" style="color: #000000;"></i> Texto
-        </button>
+         <button class="button button--text">
+            <i class="fa-solid fa-font" style="color: #f0eaea;"></i> Texto
+         </button>
 
-        <!-- modo oscuro -->
-        <button class="button button--dark">
-            <i class="fa-regular fa-lightbulb" style="color: #000000;"></i></i> Modo oscuro
-        </button>
+         <!-- modo oscuro  y modo oscuro-->
+         <button class=" button change--theme">
+            <i class="fa-regular fa-lightbulb" style="color:#f0eaea ;" id="lightbulb-off"></i> Modo oscuro
 
-        <!-- modo claro -->
-        <button class="button--light">
-            <i class="fa-solid fa-lightbulb" style="color: #000000;"></i>Modo claro
-        </button>
+            <i class="fa-solid fa-lightbulb" style="color:#f0eaea ;"id="lightbulb-on"></i>Modo claro
+
+         </button>
+
        </div>
+
     </header>
 
     <!--Contenedor principal/ meme container-->
-    <section class="meme meme-container">
-        <p class="meme upper-text"></p>
-        <div >
+    <section class="meme-container">
+        <p class="upper-text">TOP TEXT</p>
+
+        <div class="image-container">
             <img src="" alt="" class=" url-image-container">
         </div>
-        <p class="meme lower text"></p>
+
+        <p class="lower-text">BOOTOM TEXT</p>
 
           <!--Botón de descarga/download button-->
-        <button class="meme button-dowload">
-            <i class="fa-regular fa-download" style="color: #000000;"></i>Descargar
+        <button class=" button-dowload">
+            <i class="fa-solid fa-download" style="color:#f0eaea;"></i> Descargar Meme
         </button>
 
     </section>
 
- <!-- Editor de imagen-image editor -->
+    <aside>
+      <!-- Editor de imagen-image editor -->
   <section class="image-editing">
-       <!-- url image -->
-     <label for="">URL</label>
-     <input type="text" name="text" id="url-image">
+    <!-- url image -->
+  <label for="">URL</label>
+  <input type="text" name="text" id="url-image">
 
-     <!-- background -->
-     <div class="background-image">
-        <label for="">Fondo</label>
-        <input type="color" name="meme-background" id="meme-background">
-     </div>
+  <!-- background -->
+  <div class="background-image">
+     <label for="">Fondo</label>
+     <input type="color" name="meme-background" id="meme-background">
+  </div>
+
+   <!-- fitros -filter -->
+   <div class="filter-container">
+    <label for="">Brillo</label>
+    <input type="range" id="brightness" min="0" max="1" step="0.1" value="1">
+
+    <label for="">Opacidad</label>
+    <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
+
+    <label for="">Contraste</label>
+    <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
+
+    <label for="">Desenfoque</label>
+    <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
+
+    <label for="">Escala de grises</label>
+    <input type="range" id="grayscale" min="0" max="100" step="1" value="0">
+
+    <label for="">Sepia</label>
+    <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+
+    <label for="">Hue</label>
+    <input type="range" id="hue-rotation" min="0" max="359" step="1" value="0">
+
+    <label for="">Saturacion</label>
+    <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
 
 
-     <!-- fitros -filter -->
-     <div class="filter-container">
-         <label for="">Brillo</label>
-         <input type="range" id="brightness" min="0" max="1" step="0.1" value="1">
+    <label for="">Negativo</label>
+    <input type="range" id="inverts" min="0" max="1" step="0.1" value="1">
 
-         <label for="">Opacidad</label>
-         <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
+    <button id="#reset">Restablecer filtros</button>
+</div>
+</section>
 
-         <label for="">Contraste</label>
-         <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
+    </aside>
 
-         <label for="">Desenfoque</label>
-         <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
-
-         <label for="">Escala de grises</label>
-         <input type="range" id="grayscale" min="0" max="100" step="1" value="0">
-
-         <label for="">Sepia</label>
-         <input type="range" id="sepia" min="0" max="100" step="1" value="0">
-
-         <label for="">Hue</label>
-         <input type="range" id="hue-rotation" min="0" max="359" step="1" value="0">
-
-         <label for="">Saturacion</label>
-         <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
+ 
 
 
-         <label for="">Negativo</label>
-         <input type="range" id="inverts" min="0" max="1" step="0.1" value="1">
-
-         <button id="#reset">Restablecer filtros</button>
-     </div>
- </section>
+    
 
  <section>
    <!-- Text editor -->

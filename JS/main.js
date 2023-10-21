@@ -23,7 +23,7 @@ const allFiltersMeme = () =>{
 
 //url image
 $("#url-image") .addEventListener("input", (e) => {
-    $(".url-image-container").style.backgroundImage = `url(${e.target.value}})`
+    $("#image-container").style.backgroundImage = `url(${e.target.value}})`
 })
 
 //background

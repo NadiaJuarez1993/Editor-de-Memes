@@ -6,8 +6,12 @@ const $ = (selector) => document.querySelector(selector)
 
 //filter
 const allFiltersMeme = () =>{
-    $(".image-filter").style.filter = `brightness(${$("#brightness")}.value 1) opacity(${$("#opacity")}.value 1) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value 1) `
+    $(".image-filter").style.filter = `brightness(${$("#brightness")}.value) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value )`
 }
+
+// const restartText = () =>{
+//     $("#upper-text").innerText = $(`top-text-input`).value
+// }
 
 
 
@@ -22,9 +26,14 @@ const allFiltersMeme = () =>{
 //EVENTOS
 
 //text
-// $(".upper-text").addEventListener( => {
+ $("#top-text-input").addEventListener ("input", (e) => {
+    $("#upper-text").innerText = e.target.value
+})
 
-// })
+$("#lower-text-input").addEventListener ("input", (e) => {
+    $("#down-text").innerText = e.target.value
+})
+
 
 //url image
 $("#url-image") .addEventListener("input", (e) => {

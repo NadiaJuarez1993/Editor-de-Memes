@@ -30,9 +30,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-  
-    
+    font-family: 'Open Sans', sans-serif;    
 }
 
 .header-container {
@@ -64,8 +62,6 @@ h1{
     margin: 5px 5px;
     padding: 5px 5px;
     /* display: block; */
-   
-   
 }
 
 .button:hover{
@@ -83,7 +79,6 @@ h1{
     align-content: center;
     background-color: var(--background-background);
     overflow: hidden;
-   
 }
 
 .image-container{
@@ -98,7 +93,7 @@ h1{
     background-size: cover;
 }
 
-.upper-text , .lower-text {
+p {
     background-color: var(--background-text);
     height:10vh ;
     width: 50vw;
@@ -114,7 +109,6 @@ h1{
     margin-top: 1rem;
     font-size: 1.5rem;
     color: var(--background-text);
-    /* border-radius: var(--border-radius); */
     border-radius: 10px;
    
 }
@@ -124,7 +118,6 @@ h1{
 aside{
     width: 260px;
     height: 100%;
-    gap: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -146,6 +139,7 @@ h2{
 
 label{
     font-size: 1rem;
+    gap: 15px;
 }
 
 

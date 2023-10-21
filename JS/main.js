@@ -55,14 +55,33 @@ $("#displayLowerText").addEventListener("input",(e) => {
 
 //font
 $("#font").addEventListener("input", (e) =>{
-    $(".meme-text").style.fontFamily = e.target.value
+    $(".meme-top-text").style.fontFamily = e.target.value
+})
+
+$("#font").addEventListener("input", (e) =>{
+    $(".meme-down-text").style.fontFamily = e.target.value
 })
 
 //font-size
 $("#font-size").addEventListener("input" , (e) => {
-    $(".meme-text").style.fontSize = `${e.target.value}rem`
+    $(".meme-top-text").style.fontSize = `${e.target.value}px`
 
 })
+
+$("#font-size").addEventListener("input" , (e) => {
+    $(".meme-down-text").style.fontSize = `${e.target.value}px`
+
+})
+
+//color text
+$("#color-text").addEventListener("input",(e) =>{
+    $(".meme-top-text").style.color = e.target.value
+})
+
+$("#color-text").addEventListener("input",(e) =>{
+    $(".meme-down-text").style.color = e.target.value
+})
+
 
 
 

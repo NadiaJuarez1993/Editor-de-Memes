@@ -6,7 +6,7 @@ const $ = (selector) => document.querySelector(selector)
 
 //filter
 const allFiltersMeme = () =>{
-    $(".image-container").style.filter = `brightness(${$("#brightness")}.value 1) opacity(${$("#opacity")}.value 1) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value 1) `
+    $(".image-filter").style.filter = `brightness(${$("#brightness")}.value 1) opacity(${$("#opacity")}.value 1) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value 1) `
 }
 
 
@@ -23,12 +23,12 @@ const allFiltersMeme = () =>{
 
 //url image
 $("#url-image") .addEventListener("input", (e) => {
-    $("#image-container").style.backgroundImage = `url(${e.target.value}})`
+    $("#image-container").style.backgroundImage = `url(${e.target.value})`
 })
 
 //background
 $("#meme-background").addEventListener("input",(e) =>{
-    $("#url-image").style.backgroundColor = e.target.value
+    $("#image-container").style.backgroundColor = e.target.value
 })
 
 //Filter

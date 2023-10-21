@@ -30,6 +30,11 @@ $("#url-image") .addEventListener("input", (e) => {
     $(".url-image-container").style.backgroundImage = `url(${e.target.value}})`
 })
 
+//background
+$("#meme-background").addEventListener("input",(e) =>{
+    $("#url-image").style.backgroundColor = e.target.value
+})
+
 //Filter
 //brillo
 $("#brightness").addEventListener("input", allFiltersMeme)

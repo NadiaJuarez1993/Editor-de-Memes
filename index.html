@@ -41,45 +41,51 @@
     </section>
 
  <!-- Editor de imagen-image editor -->
+  <section class="image-editing">
+       <!-- url image -->
+     <label for="">URL</label>
+     <input type="text" name="text" id="url-image">
 
- <!-- url image -->
- <label for="">URL</label>
- <input type="text" name="text" id="url-image">
+     <!-- background -->
+     <div class="background-image">
+        <label for="">Fondo</label>
+        <input type="color" name="meme-background" id="meme-background">
+     </div>
 
 
- <!-- fitros -filter -->
+     <!-- fitros -filter -->
      <div class="filter-container">
-        <label for="">Brillo</label>
-        <input type="range" id="brightness" min="0" max="1" step="0.1" value="1">
+         <label for="">Brillo</label>
+         <input type="range" id="brightness" min="0" max="1" step="0.1" value="1">
 
-        <label for="">Opacidad</label>
-        <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
+         <label for="">Opacidad</label>
+         <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
 
-        <label for="">Contraste</label>
-        <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
+         <label for="">Contraste</label>
+         <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
 
-        <label for="">Desenfoque</label>
-        <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
+         <label for="">Desenfoque</label>
+         <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
 
-        <label for="">Escala de grises</label>
-        <input type="range" id="grayscale" min="0" max="100" step="1" value="0">
+         <label for="">Escala de grises</label>
+         <input type="range" id="grayscale" min="0" max="100" step="1" value="0">
 
-        <label for="">Sepia</label>
-        <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+         <label for="">Sepia</label>
+         <input type="range" id="sepia" min="0" max="100" step="1" value="0">
 
-        <label for="">Hue</label>
-        <input type="range" id="hue-rotation" min="0" max="359" step="1" value="0">
+         <label for="">Hue</label>
+         <input type="range" id="hue-rotation" min="0" max="359" step="1" value="0">
 
-        <label for="">Saturacion</label>
-        <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
+         <label for="">Saturacion</label>
+         <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
 
 
-        <label for="">Negativo</label>
-        <input type="range" id="inverts" min="0" max="1" step="0.1" value="1">
+         <label for="">Negativo</label>
+         <input type="range" id="inverts" min="0" max="1" step="0.1" value="1">
 
-        <button id="#reset">Restablecer filtros</button>
-
-    </div>
+         <button id="#reset">Restablecer filtros</button>
+     </div>
+ </section>
 
   
    <script src="./JS/main.js"></script> 

@@ -22,9 +22,9 @@ const allFiltersMeme = () =>{
 //EVENTOS
 
 //text
-$(".upper-text").addEventListener( => {
+// $(".upper-text").addEventListener( => {
 
-})
+// })
 
 //url image
 $("#url-image") .addEventListener("input", (e) => {

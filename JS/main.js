@@ -13,6 +13,13 @@ const allFiltersMeme = () =>{
 //     $("#upper-text").innerText = $(`top-text-input`).value
 // }
 
+//download
+const downloadMeme =() =>{
+    domtoimage.toBlob($(".meme-container")).then((blob) => {
+        saveAs(blob, "my-meme.png")
+    })
+}
+
 
 
 
@@ -24,6 +31,9 @@ const allFiltersMeme = () =>{
 
 
 //EVENTOS
+
+//download
+$(".button-dowload").addEventListener("click", downloadMeme)
 
 //text
 $("#top-text-input").addEventListener ("input", (e) => {
@@ -51,15 +61,14 @@ $("#displayLowerText").addEventListener("input",(e) => {
     }
 })
 
-//transparent Background
-$("#transparentBackground").addEventListener("input",(e) => {
-    if(e.target.checked){
-        $("#down-text").style.display= "none"
-        $("#image-filter").style.backgroundImage = "transparent"
-    } else{
-        $("#down-text").style.display = "block"
-    }
-})
+// //transparent Background
+// $("#transparentBackground").addEventListener("click",(e) => {
+//     if(e.target.checked){
+//         $("#down-text").style.backgroundColor = "transparent"
+//     } else{
+//         $("#down-text").style.backgroundColor = color
+//     }
+// })
 
 
 

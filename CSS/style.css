@@ -114,8 +114,8 @@ p {
 
 
 
-aside{
-    width: 260px;
+.aside-image{
+    width: 250px;
     height: 100vh;
     text-align: center;
     display: flex;
@@ -125,12 +125,33 @@ aside{
     padding: 30px 15px;
     overflow: auto;
     position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--background-panel); 
+    color: var(--background-text);
+
+}
+
+.aside-text{
+    width: 0px;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 30px 15px;
+    overflow: auto;
+    position: fixed;
+    z-index: 0;
     top: 0;
     right: 0;
     background-color: var(--background-panel); 
     color: var(--background-text);
    
 }
+
 
 h2{
     font-size: 2rem;

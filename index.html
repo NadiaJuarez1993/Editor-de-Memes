@@ -11,16 +11,16 @@
     <title>Generador de memes</title>
 </head>
 <body >
-    <header class="header-container">
+  <header class="header-container">
         <h1>Generador de memes</h1>
         
        <div class="button-container">
 
-           <button class="button button--text">
+           <button class="button button--image" id="button--image">
             <i class="fa-regular fa-file-image" style="color: #f0eaea;"></i> Imagen
          </button>
 
-         <button class="button button--text">
+         <button class="button button--text" id="button--text">
             <i class="fa-solid fa-font" style="color: #f0eaea;"></i> Texto
          </button>
 
@@ -34,9 +34,9 @@
 
        </div>
 
- </header>
+  </header>
 
-    <!--Contenedor principal/ meme container-->
+  <!--Contenedor principal/ meme container-->
   <section class="meme-container">
    <p id="upper-text" class="meme-top-text">Texto superior</p>
 
@@ -56,9 +56,9 @@
 
 
 
-
-  <aside id="aside-image"> 
-    <!-- Editor de imagen-image editor -->
+ <!-- Editor de imagen-image editor -->
+  <aside id="aside-image" class="aside-image"> 
+   
    <section class="image-editing">
      <!-- url image -->
      <label for="">URL</label>
@@ -109,7 +109,7 @@
 
 
  
-  <aside>
+  <aside id="aside-text" class="aside-text">
     <section class="text-editing">
       <h2>TEXTO</h2>
     <!-- texto sup -->

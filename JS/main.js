@@ -4,6 +4,8 @@ const $ = (selector) => document.querySelector(selector)
 
 //FUNCIONES
 
+//
+
 //filter
 const allFiltersMeme = () =>{
     $("#image-filter").style.filter = `brightness(${$("#brightness")}.value) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value )`
@@ -32,8 +34,20 @@ const downloadMeme =() =>{
 
 //EVENTOS
 
-//download
-$(".button-dowload").addEventListener("click", downloadMeme)
+//button and aside image
+
+ $("#button--text").addEventListener("click",() =>{
+    $("#aside-text").style.width = "250px"
+    $("#aside-text").style.displey = "none"
+ })
+
+  $("#button--image").addEventListener("click",() =>{
+     $("#aside-text").style.width = "0"
+ })
+
+
+
+
 
 //text
 $("#top-text-input").addEventListener ("input", (e) => {
@@ -193,6 +207,8 @@ $("#meme-background").addEventListener("input",(e) =>{
 })
 
 
+//download
+$(".button-dowload").addEventListener("click", downloadMeme)
 
 
 

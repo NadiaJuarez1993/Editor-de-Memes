@@ -6,10 +6,7 @@ const $ = (selector) => document.querySelector(selector)
 
 //
 
-//filter
-const allFiltersMeme = () =>{
-    $("#image-filter").style.filter = `brightness(${$("#brightness")}.value) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value )`
-}
+
 
 // const restartText = () =>{
 //     $("#upper-text").innerText = $(`top-text-input`).value
@@ -35,30 +32,26 @@ const downloadMeme =() =>{
 //EVENTOS
 
 //button and aside image
-
  $("#button--text").addEventListener("click",() =>{
     $("#aside-text").style.width = "250px"
  })
 
   $("#button--image").addEventListener("click",() =>{
      $("#aside-text").style.width = "0"
- })
+})
 
 //darck mode-light mode
 $(".change--theme").addEventListener("click", () => {
     const currentTheme = $("body").getAttribute("data-theme")
-    if (currentTheme){
+     if (currentTheme){
         $("body").removeAttribute("data-theme", "light-theme")
         
-    }else{
-        $("body").setAttribute("data-theme", "light-theme")
+     }else{
+         $("body").setAttribute("data-theme", "light-theme")
     }
+    $("#lightbulb-off").classList.toggle("hidden")
+    $("#lightbulb-on").classList.toggle("hidden")
 })
-$("#lightbulb-off").classList.toggle("hidden")
-$("#lightbulb-on").classList.toggle("hidden")
-
-
-
 
 
 //text
@@ -116,7 +109,6 @@ $("#font-size").addEventListener("input" , (e) => {
 
 $("#font-size").addEventListener("input" , (e) => {
     $(".meme-down-text").style.fontSize = `${e.target.value}px`
-
 })
 
 //color text
@@ -176,6 +168,11 @@ $("#meme-background").addEventListener("input",(e) =>{
 })
 
 //Filter
+//filter
+const allFiltersMeme = () =>{
+    $("#image-filter").style.filter = `brightness(${$("#brightness")}.value 1) opacity(${$("#opacity")}.value) contrast(${$("#contrast")}.value %) blur(${$("blur")}.value px)  grayscale(${$("#grayscale")}.value %)  sepia(${$("#sepia")}.value %) hue-rotation(${$("#hue-rotation")}.value deg) saturation(${$("#saturation")}.value %) invert(${$("#invert")}.value )`
+}
+
  //brillo
  $("#brightness").addEventListener("input", allFiltersMeme)
 

@@ -38,12 +38,24 @@ const downloadMeme =() =>{
 
  $("#button--text").addEventListener("click",() =>{
     $("#aside-text").style.width = "250px"
-    $("#aside-text").style.displey = "none"
  })
 
   $("#button--image").addEventListener("click",() =>{
      $("#aside-text").style.width = "0"
  })
+
+//darck mode-light mode
+$(".change--theme").addEventListener("click", () => {
+    const currentTheme = $("body").getAttribute("data-theme")
+    if (currentTheme){
+        $("body").removeAttribute("data-theme", "light-theme")
+        
+    }else{
+        $("body").setAttribute("data-theme", "light-theme")
+    }
+})
+$("#lightbulb-off").classList.toggle("hidden")
+$("#lightbulb-on").classList.toggle("hidden")
 
 
 

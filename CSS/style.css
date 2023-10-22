@@ -49,7 +49,7 @@ h1{
     font-size: 50px;
 }
 
-.button  {
+button  {
     height: 2rem;
     margin-top: 1rem;
     margin: 1rem;
@@ -112,8 +112,6 @@ p {
    
 }
 
-
-
 .aside-image{
     width: 250px;
     height: 100vh;
@@ -130,7 +128,6 @@ p {
     right: 0;
     background-color: var(--background-panel); 
     color: var(--background-text);
-
 }
 
 .aside-text{
@@ -148,8 +145,7 @@ p {
     top: 0;
     right: 0;
     background-color: var(--background-panel); 
-    color: var(--background-text);
-   
+    color: var(--background-text); 
 }
 
 
@@ -182,7 +178,6 @@ input{
     border-radius: var(--border-radius);
     font-size: 1.5rem;
     color: var(--background-text);
-
 }
 
 .icon{
@@ -191,8 +186,10 @@ input{
     font-size: 2rem;
     gap: 1rem;
     border-radius: var(--border-radius);
+}
 
-
+.hidden {
+    display: none;
 }
 
 

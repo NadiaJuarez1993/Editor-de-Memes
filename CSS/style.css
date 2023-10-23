@@ -1,8 +1,8 @@
 
-
 :root {
     --background-header: #191e2b;
     --background-background: #30343f;
+    --background-p:#ffffff;
     --background-panel: #252935;
     --background-boton-default: #393e49;
     --background-boton-default-hover: #4e5565;
@@ -10,6 +10,8 @@
     --color-title-panel: rgb(33 33 33 / 80%);
     --color-title-control: rgb(33 33 33 / 70%);
     --border-radius: 8px;
+    
+    --font-primary:'Open Sans', sans-serif;
 } 
 
 
@@ -23,6 +25,7 @@
     --color-title-panel: rgb(33 33 33 / 80%);
     --color-title-control: rgb(33 33 33 / 70%);
     --border-radius: 8px;
+    --font-primary:'Open Sans', sans-serif;
 } 
 
 
@@ -46,10 +49,10 @@
 }
 
 h1{
-    font-size: 50px;
+    font-size:3.5rem;
 }
 
-button , span {
+button  {
     height: 2rem;
     margin-top: 1rem;
     margin: 1rem;
@@ -59,12 +62,20 @@ button , span {
     border: 0;
     cursor: pointer;
     margin: 5px 5px;
-    padding: 5px 5px;
 }
+
+span {
+    color: var(--background-text);
+    font-weight: 200;
+    margin: 5px 5px;
+    padding: 5px 5px;  
+}
+
+
 
 .button:hover{
     background-color: var(--background-boton-default-hover);
-    height: 3.5rem;
+    height: 3rem;
     border-radius: var(--border-radius);
 }
 
@@ -92,7 +103,7 @@ button , span {
 }
 
 p {
-    background-color: var(--background-text);
+    background-color: var(--background-p);
     height:10vh ;
     width: 50vw;
     text-align: center;
@@ -100,15 +111,14 @@ p {
     font-weight: 800;
 }
 
-.button-dowload{
+.button-dowload , .download-style{
     background-color: green ;
     height: 10vh;
     width: 15vw;
     margin-top: 1rem;
     font-size: 1.5rem;
-    color: var(--background-text);
+    color: #ffffff;
     border-radius: 10px;
-   
 }
 
 .aside-image{

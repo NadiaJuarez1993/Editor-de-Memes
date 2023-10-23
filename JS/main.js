@@ -153,20 +153,46 @@ $("#text-aline-right").addEventListener("click",(e) =>{
 
 //outline
 $("#outline-light").addEventListener("click",(e) =>{
-    $("#upper-text").style.webkitTextStrokeColor = "white"
+    $("#upper-text").style.webkitTextStroke = "1px white"
 })
 $("#outline-light").addEventListener("click",(e) =>{
-    $("#down-text").style.webkitTextStrokeColor = "white"
+    $("#down-text").style.webkitTextStroke = "1px white"
 })
 
-$("#outline-light").addEventListener("click",(e) =>{
-    $("#upper-text").style.webkitTextStrokeColor = "black"
+$("#outline-dark").addEventListener("click",(e) =>{
+    $("#upper-text").style.webkitTextStroke = "1px black"
 })
-$("#outline-light").addEventListener("click",(e) =>{
-    $("#down-text").style.webkitTextStrokeColor = "black"
+$("#outline-dark").addEventListener("click",(e) =>{
+    $("#down-text").style.webkitTextStroke = "1px black"
+})
+
+$("#outline-none").addEventListener("click",(e) =>{
+    $("#upper-text").style.webkitTextStroke = "0 black"
+})
+$("#outline-none").addEventListener("click",(e) =>{
+    $("#down-text").style.webkitTextStroke = "0 black"
+})
+
+//spacing
+$("#spacing").addEventListener("input" , (e) => {
+    $("#upper-text").style.padding = `${e.target.value}rem`
+
+})
+
+$("#spacing").addEventListener("input" , (e) => {
+    $("#down-text").style.padding = `${e.target.value}rem`
+
 })
 
 
+//line-spacing
+$("#line-spacing").addEventListener("input" , (e) => {
+    $("#upper-text").style.lineHeight 
+})
+
+$("#line-spacing").addEventListener("input" , (e) => {
+    $("#down-text").style.lineHeight
+})
 
 
 

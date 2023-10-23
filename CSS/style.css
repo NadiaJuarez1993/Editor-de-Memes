@@ -102,6 +102,12 @@ span {
     background-size: cover;
 }
 
+.image-filter{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 p {
     background-color: var(--background-p);
     height:10vh ;
@@ -137,6 +143,7 @@ p {
     right: 0;
     background-color: var(--background-panel); 
     color: var(--background-text);
+    color: w;
 }
 
 .aside-text{
@@ -173,7 +180,7 @@ label {
     text-align: center;
 }
 
-input{
+input , select {
     width: 12rem;
     height: 2rem;
     display: flex;
@@ -186,7 +193,8 @@ input{
     background-color: var(--background-boton-default);
     border-radius: var(--border-radius);
     font-size: 1.5rem;
-    color: var(--background-text);
+    color: red;
+    /* color: var(--background-text); */
 }
 
 .icon{
@@ -201,6 +209,10 @@ input{
     display: none!important;
 }
 
-
+.check{
+    height: 1rem;
+    width: 1rem;
+    color: red;
+}
 
 

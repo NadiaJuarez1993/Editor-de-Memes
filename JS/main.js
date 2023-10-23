@@ -31,7 +31,7 @@ const downloadMeme =() =>{
 
 //EVENTOS
 
-//button and aside image
+//button and aside image-text
  $("#button--text").addEventListener("click",() =>{
     $("#aside-text").style.width = "250px"
  })
@@ -151,6 +151,20 @@ $("#text-aline-right").addEventListener("click",(e) =>{
 
 })
 
+//outline
+$("#outline-light").addEventListener("click",(e) =>{
+    $("#upper-text").style.webkitTextStrokeColor = "white"
+})
+$("#outline-light").addEventListener("click",(e) =>{
+    $("#down-text").style.webkitTextStrokeColor = "white"
+})
+
+$("#outline-light").addEventListener("click",(e) =>{
+    $("#upper-text").style.webkitTextStrokeColor = "black"
+})
+$("#outline-light").addEventListener("click",(e) =>{
+    $("#down-text").style.webkitTextStrokeColor = "black"
+})
 
 
 
@@ -164,7 +178,12 @@ $("#url-image") .addEventListener("input", (e) => {
 
 //background
 $("#meme-background").addEventListener("input",(e) =>{
-    $("#image-container").style.backgroundColor = e.target.value
+    $("#image-filter").style.backgroundColor = e.target.value
+})
+
+//Mix filter
+$("#mix-filters").addEventListener("input",(e) => {
+    $("3image-container").style.mixBlendMode = e.target.value
 })
 
 //Filter

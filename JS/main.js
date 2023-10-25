@@ -4,29 +4,12 @@ const $ = (selector) => document.querySelector(selector)
 
 //FUNCIONES
 
-//
-
-
-
-// const restartText = () =>{
-//     $("#upper-text").innerText = $(`top-text-input`).value
-// }
-
 //download
 const downloadMeme =() =>{
     domtoimage.toBlob($(".meme-container")).then((blob) => {
         saveAs(blob, "my-meme.png")
     })
 }
-
-
-
-
-
-
-
-
-
 
 
 //EVENTOS
@@ -37,8 +20,9 @@ const downloadMeme =() =>{
  })
 
   $("#button--image").addEventListener("click",() =>{
-     $("#aside-text").style.width = "0"
+     $("#aside-text").style.width = "0"    
 })
+
 
 //darck mode-light mode
 $(".change--theme").addEventListener("click", () => {

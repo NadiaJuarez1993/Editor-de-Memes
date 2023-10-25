@@ -36,6 +36,8 @@
     font-family: 'Open Sans', sans-serif; 
 }
 
+
+
 .header-container {
     background-color: var(--background-header);
     color: var(--background-text);
@@ -49,7 +51,7 @@
 }
 
 h1{
-    font-size:3.5rem;
+    font-size:3rem;
 }
 
 button  {
@@ -58,15 +60,14 @@ button  {
     margin: 1rem;
     background-color: var(--background-header);
     color: var(--background-text);
-    font-size: 30px;
+    font-size: 20px;
     border: 0;
     cursor: pointer;
-    margin: 5px 5px;
 }
 
 span {
     color: var(--background-text);
-    font-weight: 200;
+    font-weight: 100;
     margin: 5px 5px;
     padding: 5px 5px;  
 }
@@ -108,14 +109,13 @@ span {
     background-size: cover;
 }
 
-p {
+p{
     background-color: var(--background-p);
     height:15vh ;
     width: 50vw;
     text-align: center;
     font-size: 50px;
     font-weight: 800;
-    padding: 2rem;  
 }
 
 .button-dowload , .download-style{
@@ -123,42 +123,40 @@ p {
     height: 10vh;
     width: 15vw;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #ffffff;
     border-radius: 10px;
 }
 
+
 .aside-image{
+    overflow: auto;
     width: 250px;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
     padding: 30px 15px;
-    overflow: auto;
-    position: fixed;
-    z-index: 0;
+    position: absolute;
     top: 0;
-    right: 0;
+    right:0px;
     background-color: var(--background-panel); 
-    color: var(--background-text);
-    color: w;
+    color: var(--background-text); 
 }
 
 .aside-text{
+    overflow: hidden;
     width: 0px;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
     padding: 30px 15px;
-    overflow: auto;
     position: fixed;
-    z-index: 0;
     top: 0;
     right: 0;
     background-color: var(--background-panel); 
@@ -167,7 +165,7 @@ p {
 
 
 h2{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 
@@ -176,26 +174,22 @@ label {
     flex-direction: column;
     justify-content: center;
     font-size: 1rem;
-    margin: 1rem 1rem;
-    padding: 1rem 1rem;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
 
-input , select {
-    width: 12rem;
-    height: 2rem;
+input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    margin: 1rem 1rem;
-    padding: 1rem 1rem;
     text-align: center;
     background-color: var(--background-boton-default);
     border-radius: var(--border-radius);
-    font-size: 1.5rem;
-    color: red;
-    /* color: var(--background-text); */
+    color: var(--background-text); 
+}
+
+section{
+ height: 1rem;
 }
 
 .icon{
@@ -210,10 +204,5 @@ input , select {
     display: none!important;
 }
 
-.check{
-    height: 1rem;
-    width: 1rem;
-    color: red;
-}
 
 

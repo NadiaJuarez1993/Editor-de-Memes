@@ -37,7 +37,7 @@ $(".change--theme").addEventListener("click", () => {
     $("#lightbulb-on").classList.toggle("hidden")
 })
 
-
+//*******************************************************//
 //text
 $("#top-text-input").addEventListener ("input", (e) => {
     $("#upper-text").innerText = e.target.value
@@ -64,15 +64,20 @@ $("#displayLowerText").addEventListener("input",(e) => {
     }
 })
 
-// //transparent Background
-// $("#transparentBackground").addEventListener("click",(e) => {
-//     if(e.target.checked){
-//         $("#down-text").style.backgroundColor = "transparent"
-//     } else{
-//         $("#down-text").style.backgroundColor = color
-//     }
-// })
 
+//fodo transparente
+$("#transparentBackground").addEventListener("input",(e) => {
+    if("#transparentBackground".checked){
+        $("#upper-text").style.backgroundColor = "transparent"
+        $("#upper-text").style.top ="0"
+        $("#down-text").style.backgroundColor = "transparent"
+        $("#bottom-text").style.top ="0"
+
+    }else{
+        $("#upper-text").style.backgroundColor = "white"
+        $("#upper-text").style.backgroundColor = "white"
+    }
+})
 
 
 
@@ -193,7 +198,7 @@ $("#meme-background").addEventListener("input",(e) =>{
 
 //Mix filter
 $("#mix-filters").addEventListener("input",(e) => {
-    $("3image-container").style.mixBlendMode = e.target.value
+    $("image-container").style.mixBlendMode = e.target.value
 })
 
 //Filter
@@ -240,7 +245,7 @@ const allFiltersMeme = () =>{
     $("#hue-rotation").value = "0deg"
     $("#saturation").value = "100%"
     $("#invert").value = "1"
-    $("#image-filter").stile.filter = "none"
+    $("#image-filter").style.filter = "none"
 
 })
 

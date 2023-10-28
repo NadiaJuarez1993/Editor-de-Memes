@@ -130,8 +130,8 @@ p{
 }
 
 
-/* .aside-image{
-    overflow: hidden;
+.aside-image{
+    overflow: scroll;
     width: 250px;
     height: 742px;
     text-align: center;
@@ -145,7 +145,9 @@ p{
     margin-right: 0;
     background-color: var(--background-panel); 
     color: var(--background-text); 
-}  */
+}  
+
+
 
 .aside-text{
     position: absolute;
@@ -171,21 +173,41 @@ h2{
 }
 
 
-label{
+h3{
    font-family: 'Open Sans', sans-serif;
     display: block;
     font-weight: 800;
     font-size: 0.8rem;
     text-align: left;
     margin: 10px 10px;
-    color:var(--background-text); 
+    color:var(--background-text);
 }
 
-input , textarea, select {
+label{
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-align: left;
+    margin: 10px 10px;
+}
+
+input[type="range"] {
+    width: 12rem;
+    background-color: #5a5d68;
+    border-radius: 10px;
+    appearance: none;
+    height: 6px;
+    margin-top: 10px;
+}
+
+input, textarea, select {
     margin: 10px 10px;
     display: flex;
     height: 2.5rem;
     width: 12rem;
+    border: none;
+    font-size: 1rem;
     text-align: center;
     background-color: var(--background-boton-default);
     border-radius: var(--border-radius);
@@ -193,12 +215,9 @@ input , textarea, select {
 }
 
 
-
-
-
-#displayLowerText, #displayTopText, #transparentBackground .check-box {
+#displayLowerText, #displayTopText, #transparentBackground  {
     display: flex;
-    display: inline-flex;
+    display: inline-block;
     height: 0.7rem;
     width: 0.7rem;
     left: 0;
@@ -206,10 +225,13 @@ input , textarea, select {
     margin-bottom: 2rem;
 }
 
+
 .check-box{
     font-size: 0.8rem;
     margin-right: 0;
 }
+
+
 
 #font-size{
     width: 3rem;
@@ -234,6 +256,7 @@ gap: 0.5px;
 margin-top: 0;
 margin-right: 0;
 padding: 0 0;
+border: none;
 }
 
 #text-aline-right:hover{
@@ -249,6 +272,45 @@ padding: 0 0;
     border-radius: var(--border-radius);
 }
 
+#outline-none , #outline-light , #outline-dark{
+    width: 4rem;
+    padding: 0;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--background-boton-default);
+    align-self: baseline;
+    margin-right: -15px;
+    margin-top: 0;
+   border: none;
+}
+
+#outline-none:hover{
+    background-color: var(--background-boton-default-hover);
+    border-radius: var(--border-radius);
+}
+
+
+#outline-light:hover{
+    background-color: var(--background-boton-default-hover);
+    border-radius: var(--border-radius);
+}
+
+#outline-dark:hover{
+    background-color: var(--background-boton-default-hover);
+    border-radius: var(--border-radius);
+}
+
+.reset{
+    border-radius: var(--border-radius);
+    background-color: var(--background-boton-default);
+    color: var(--background-text);
+    font-size: 1rem;
+}
+
+.reset:hover{
+    background-color: var(--background-boton-default-hover);
+    border-radius: var(--border-radius);
+}
 
 .hidden {
     display: none!important;

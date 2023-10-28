@@ -47,91 +47,154 @@
     </button>
   </section>
 
- 
+  <!-- Editor de imagen-image editor -->
+  <aside id="aside-image" class="aside-image"> 
+    <h2>IMAGEN</h2>
+   <section class="image-editing">
+     <!-- url image -->
+     <h3>URL</h3>
+     
+       <input type="text" name="text" id="url-image">
+     <!-- background -->
+     <div class="background-image">
+      <h3>FONDO</h3>
+      
+         <input type="color" name="meme-background" id="meme-background">
+      </div>
+      <select name="" id="mix-filters">
+        <option value="">Ninguno</option>
+        <option value="lighten">Aclarar</option>
+        <option value="darken">Oscurecer</option>
+        <option value="difference">Diferencia</option>
+        <option value="luminosity">Luminosidad</option>
+        <option value="multiply">Multiplicar</option>
+      </select>
 
+     <!-- fitros -filter -->
+      <div class="filter-container">
+        <label for="">Brillo</label>
+        <input type="range" id="brightness" min="0" max="1" step="0.1" value="1">
 
+       <label for="">Opacidad</label>
+         <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
 
+       <label for="">Contraste</label>
+         <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
+
+       <label for="">Desenfoque</label>
+         <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
+
+       <label for="">Escala de grises</label>
+         <input type="range" id="grayscale" min="0" max="100" step="1" value="0">
+
+       <label for="">Sepia</label>
+         <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+
+       <label for="">Hue</label>
+         <input type="range" id="hue-rotation" min="0" max="359" step="1" value="0">
+
+       <label for="">Saturacion</label>
+         <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
+
+       <label for="">Negativo</label>
+         <input type="range" id="inverts" min="0" max="1" step="0.1" value="1">
+      </div>
+      <button id="#reset" class="reset">Restablecer filtros</button>
+   </section>
+
+  </aside>
+  
  
   <aside id="aside-text" class="aside-text">
-      <h2>TEXTO</h2>
-    <!-- texto sup -->
-   <div>
-     <label for="">SUPERIOR</label>
-     <textarea name="" id="top-text-input" cols="30" rows="2">TEXTO SUPERIOR</textarea>
-       <!-- <input type="text" name="top-text-input" id="top-text-input">Texto superior -->
-       <input type="checkbox" name="displayTopText" id="displayTopText"> <span  class="check-box">Sin texto superior</span>
-    </div>
+    <h2>TEXTO</h2>
+  <!-- texto sup -->
+ <div>
+   <label for="">SUPERIOR</label>
+   <textarea name="" id="top-text-input" cols="30" rows="2">TEXTO SUPERIOR</textarea>
+     <!-- <input type="text" name="top-text-input" id="top-text-input">Texto superior -->
+     <input type="checkbox" name="displayTopText" id="displayTopText"> <span  class="check-box">Sin texto superior</span>
+  </div>
 
-    <!-- texto inferior -->
-    <div>
-      <label for="">INFERIOR</label>
-      <textarea name="" id="lower-text-input" cols="30" rows="2">TEXTO INFERIOR</textarea>
-       <!-- <input type="text" name="lower-text-input" id="lower-text-input">Texto inferior -->
-       <input type="checkbox" name="displayLowerText" id="displayLowerText" > <span class="check-box">Sin texto inferior</span>
-    </div>
-   <!-- fuente -->
-    <div>
-    
-      <label for="">FUENTE</label>
-      <select name="" id="font">
-        <option value="Open Sans">Seleccionar opción</option>
-        <option value="Arial">Arial</option>
-        <option value="Arial Black">Arial Black</option>
-        <option value="America Typewriter">America Typewriter</option>
-        <option value="Andale Mono">Andale Mono</option>
-        <option value="Comic Sans MS">Comic Sans MS</option>
-        <option value="Helvetica">Helvetica</option>
-        <option value="Impact">Impact</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Times New Roman">Time New Roman</option>
-      </select>
-     
-      <!-- tamaño de texto -->
-     <input type="number" name="" id="font-size" value="16">
-     
-     <!--  alineacion de texto -->
-      <button id="text-aline-left"><i class="icon fa-solid fa-align-left" ></i></button>
-      <button id="text-aline-center"><i class="icon fa-solid fa-align-center" ></i></button>
-      <button id="text-aline-right"><i class="icon fa-solid fa-align-right" "></i></button>
-    </div>
-    <!-- color -->
-    <div>
-      <label for="">COLOR</label>
-        <input type="color" name="color-text" id="color-text">
-    </div>
+  <!-- texto inferior -->
+  <div>
+    <label for="">INFERIOR</label>
+    <textarea name="" id="lower-text-input" cols="30" rows="2">TEXTO INFERIOR</textarea>
+     <!-- <input type="text" name="lower-text-input" id="lower-text-input">Texto inferior -->
+     <input type="checkbox" name="displayLowerText" id="displayLowerText" > <span class="check-box">Sin texto inferior</span>
+  </div>
+ <!-- fuente -->
+  <div>
+  
+    <label for="">FUENTE</label>
+    <select name="" id="font">
+      <option value="Open Sans">Seleccionar opción</option>
+      <option value="Arial">Arial</option>
+      <option value="Arial Black">Arial Black</option>
+      <option value="America Typewriter">America Typewriter</option>
+      <option value="Andale Mono">Andale Mono</option>
+      <option value="Comic Sans MS">Comic Sans MS</option>
+      <option value="Helvetica">Helvetica</option>
+      <option value="Impact">Impact</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Times New Roman">Time New Roman</option>
+    </select>
+   
+    <!-- tamaño de texto -->
+   <input type="number" name="" id="font-size" value="16">
+   
+   <!--  alineacion de texto -->
+    <button id="text-aline-left"><i class="icon fa-solid fa-align-left" ></i></button>
+    <button id="text-aline-center"><i class="icon fa-solid fa-align-center" ></i></button>
+    <button id="text-aline-right"><i class="icon fa-solid fa-align-right" "></i></button>
+  </div>
+  <!-- color -->
+  <div>
+    <label for="">COLOR</label>
+      <input type="color" name="color-text" id="color-text">
+      <!-- fondo transparente -->
 
-    <!-- fondo transparente -->
-    <div>
-      <input type="checkbox" name="" id="transparentBackground" ><span class="check">Fondo transparente</span>Fondo transparente
-    </div>
-   
-      <!-- contorno -->
-      <h2>CONTORNO</h2>
-      <button id="outline-none">Ninguno</button>
-      <button id="outline-light">Claro</button>
-      <button id="outline-dark">Oscuro</button>
-   
-      <!-- espaciado -->
-      <h2>Espaciado</h2>
-      <input type="number" name="" id="spacing" value="1">
+    <input type="checkbox" name="transparentBackground" id="transparentBackground"> <span class="check-box">Fondo transparente</span>
+  </div>
 
-   
-      <!-- interlineado -->
-      <h2>Interlineado</h2>
-      <select name="" id="
-      line-spacing">
-        <option value="0,8">0,8</option>
-        <option value="1">1</option>
-        <option value="1,2">1,2</option>
-        <option value="1,5">1,5</option>
-        <option value="2">2</option>
-        <option value="2,25">2,25</option>
-      </select>
-   
-   
-
- </aside>
+  
+  
  
+    <!-- contorno -->
+    <label for="">CONTORNO</label>
+    <div>
+    <button id="outline-none">Ninguno</button>
+    <button id="outline-light">Claro</button>
+    <button id="outline-dark">Oscuro</button>
+  </div>
+ 
+    <!-- espaciado -->
+    <label for="">ESPACIADO</label>
+  
+    <input type="number" name="" id="spacing" value="1">
+
+ 
+    <!-- interlineado -->
+    <label for="">INTERLINEADO</label>
+   
+    <select name="" id="
+    line-spacing">
+      <option value="0,8">0,8</option>
+      <option value="1">1</option>
+      <option value="1,2">1,2</option>
+      <option value="1,5">1,5</option>
+      <option value="2">2</option>
+      <option value="2,25">2,25</option>
+    </select>
+ 
+ 
+
+</aside>
+
+
+ 
+
+
+
 
 
    <script src="./JS/main.js"></script>

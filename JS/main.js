@@ -14,14 +14,14 @@ const $ = (selector) => document.querySelector(selector)
 
 // //EVENTOS
 
-// //button and aside image-text
-//  $("#button--text").addEventListener("click",() =>{
-//     $("#aside-text").style.width = "250px"
-//  })
+//button and aside image-text
+  $("#button--text").addEventListener("click",() =>{
+    $("#aside-text").style.width = "250px"
+ })
 
-//   $("#button--image").addEventListener("click",() =>{
-//      $("#aside-text").style.width = "0"    
-// })
+   $("#button--image").addEventListener("click",() =>{
+      $("#aside-text").style.width = "0"    
+ })
 
 
 // //darck mode-light mode

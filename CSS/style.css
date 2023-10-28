@@ -273,15 +273,15 @@ border: none;
 }
 
 #outline-none , #outline-light , #outline-dark{
-    width: 4rem;
-    padding: 0;
+    width: 4.5rem;
+    height: 2rem;
     font-size: 1rem;
     border-radius: var(--border-radius);
     background-color: var(--background-boton-default);
-    align-self: baseline;
-    margin-right: -15px;
+    margin-right: 0;
+    margin-left: 0;
     margin-top: 0;
-   border: none;
+    border: none;
 }
 
 #outline-none:hover{

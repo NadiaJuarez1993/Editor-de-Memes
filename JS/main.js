@@ -118,28 +118,40 @@ $("#color-text").addEventListener("input",(e) =>{
 })
 
 
-//fodo transparente
-$("#transparentBackground").addEventListener("input",(e) => {
-     if(e.target.checked){
-         $("#upper-text").style.backgroundColor = "transparent"
-         $("#down-text").style.backgroundColor = "transparent"
-     }else{
-         $("#upper-text").style.backgroundColor = "white"
-         $("#down-text").style.backgroundColor = "white"
-    }
+//background-color
+$("#background-color").addEventListener("input",(e) =>{
+    $(".meme-top-text").style.backgroundColor = e.target.value
+})
+
+$("#background-color").addEventListener("input",(e) =>{
+    $(".meme-down-text").style.backgroundColor = e.target.value
 })
 
 
-// //TRANPARENT
-// $("#transparentBackground").addEventListener("input",(e) =>{
-//     if(e.target.checked){
-//         $("#upper-text").style.display ="none"
-//         $("#down-text").style.display ="none"
-//     } else{
-//             $("#upper-text").style.display ="block"
-//             $("#down-text").style.display ="block"     
+
+
+// //fondo transparente
+// $("#transparentBackground").addEventListener("input",(e) => {
+//      if(e.target.checked){
+//          $("#upper-text").style.backgroundColor = "transparent"
+//          $("#down-text").style.backgroundColor = "transparent"
+//      }else{
+//          $("#upper-text").style.backgroundColor = "white"
+//          $("#down-text").style.backgroundColor = "white"
 //     }
 // })
+
+
+//TRANPARENT
+$("#transparentBackground").addEventListener("input",(e) =>{
+    if(e.target.checked){
+         $("#upper-text").style.display ="none"
+         $("#down-text").style.display ="none"
+     } else{
+             $("#upper-text").style.display ="block"
+             $("#down-text").style.display ="block"     
+     }
+})
 
  //outline
  $("#outline-light").addEventListener("click",(e) =>{

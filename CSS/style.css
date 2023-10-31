@@ -35,10 +35,6 @@
     font-family: "Open Sans", sans-serif;
 }
 
-body {
-    height: 100vh;
-    position: relative;
-  }
 
 
 .header-container {
@@ -49,7 +45,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 25vh;
-    width: 100%;
+    width: 100vw;
     padding: 1rem 1rem; 
 }
 
@@ -85,7 +81,7 @@ span {
 
 .meme-container{
     height: 100vh;
-    width:100%;
+    width:100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,21 +90,15 @@ span {
     
 }
 
-.image-container{
+#image-container{
     height: 100vh;
     width: 50vw;
-    background-color: black; 
-    background-position: center;
+    background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover; 
 }
 
-.image-filter{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 p{
     background-color: var(--background-p);
@@ -129,11 +119,10 @@ p{
     border-radius: 10px;
 }
 
-
 .aside-image{
-    overflow: scroll;
+    overflow: auto;
     width: 250px;
-    height: 742px;
+    height:100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -145,17 +134,18 @@ p{
     margin-right: 0;
     background-color: var(--background-panel); 
     color: var(--background-text); 
+    
 }  
 
 
 
 .aside-text{
     position: absolute;
-    width: 250px;
+    width: 0px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    position: fixed;
+   
     z-index: 10;
     top: 0;
     right: 0;
@@ -199,6 +189,7 @@ input[type="range"] {
     appearance: none;
     height: 6px;
     margin-top: 10px;
+    
 }
 
 input, textarea, select {

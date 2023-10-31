@@ -6,6 +6,12 @@
     <!-- Download img script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <!-- fuentes -->
+    <link href="https://fonts.cdnfonts.com/css/arial" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/andale-mono" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cmu-typewriter-text" rel="stylesheet">
+                
     <link rel="stylesheet" href="CSS/style.css">
     <script src="https://kit.fontawesome.com/a2efbdb0cc.js" crossorigin="anonymous"></script>
     <title>Generador de memes</title>
@@ -36,9 +42,8 @@
     <!-- texto de meme-->
    <p id="upper-text" class="meme-top-text">Texto superior</p>
    <!-- contendor de imagen-->
-   <div id="image-container" class="image-container">
-     <img src="" alt="" id="image-filter" class="image-filter">
-   </div>
+   <div id="image-container"></div>
+
    <!-- texto de meme-->
    <p id="down-text" class="meme-down-text">Texto inferior</p>
     <!--Botón de descarga/download button-->
@@ -73,31 +78,31 @@
      <!-- fitros -filter -->
       <div class="filter-container">
         <label for="">Brillo</label>
-        <input type="range" id="brightness" min="0" max="1" step="0.1" value="1">
+        <input type="range" min="0" max="1" step="0.1" value="1" id="brightness">
 
        <label for="">Opacidad</label>
-         <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
+         <input type="range"  min="0" max="1" step="0.1" value="1" id="opacity">
 
        <label for="">Contraste</label>
-         <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
+         <input type="range" min="100" max="1000" step="1" value="100"  id="contrast">
 
        <label for="">Desenfoque</label>
-         <input type="range" id="blur" min="0" max="10" step="0.1" value="0">
+         <input type="range" min="0" max="10" step="0.1" value="0"  id="blur">
 
        <label for="">Escala de grises</label>
-         <input type="range" id="grayscale" min="0" max="100" step="1" value="0">
+         <input type="range"  min="0" max="100" step="1" value="0" id="grayscale">
 
        <label for="">Sepia</label>
-         <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+         <input type="range"  min="0" max="100" step="1" value="0" id="sepia">
 
        <label for="">Hue</label>
-         <input type="range" id="hue-rotation" min="0" max="359" step="1" value="0">
+         <input type="range"  min="0" max="359" step="1" value="0" id="hue-rotation">
 
        <label for="">Saturacion</label>
-         <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
+         <input type="range"  min="100" max="1000" step="10" value="100" id="saturation">
 
        <label for="">Negativo</label>
-         <input type="range" id="inverts" min="0" max="1" step="0.1" value="1">
+         <input type="range"  min="0" max="1" step="0.1" value="1" id="inverts">
       </div>
       <button id="#reset" class="reset">Restablecer filtros</button>
    </section>
@@ -131,10 +136,10 @@
       <option value="Open Sans">Seleccionar opción</option>
       <option value="Arial">Arial</option>
       <option value="Arial Black">Arial Black</option>
-      <option value="America Typewriter">America Typewriter</option>
+      <option value="CMU Typewriter Text">America Typewriter</option>
       <option value="Andale Mono">Andale Mono</option>
       <option value="Comic Sans MS">Comic Sans MS</option>
-      <option value="Helvetica">Helvetica</option>
+      <option value="Helvetica Neue">Helvetica</option>
       <option value="Impact">Impact</option>
       <option value="Verdana">Verdana</option>
       <option value="Times New Roman">Time New Roman</option>
@@ -168,23 +173,22 @@
    
     <h3>ESPACIADO</h3>
   
-    <input type="number" name="" id="spacing" value="1">
+    <input type="number" name="" id="spacing" value="16">
 
  
     <!-- interlineado -->
     <h3>INTERLINEADO</h3>
    
-    <select name="" id="
-    line-spacing">
-      <option value="0,8">0,8</option>
+    <select name="" id="line-spacing">
+      <option value="0.8">0,8</option>
       <option value="1">1</option>
-      <option value="1,2">1,2</option>
-      <option value="1,5">1,5</option>
+      <option value="1.2">1,2</option>
+      <option value="1.5">1,5</option>
       <option value="2">2</option>
-      <option value="2,25">2,25</option>
+      <option value="2.25">2,25</option>
     </select>
-</aside>
+  </aside>
 
-   <script src="./JS/main.js"></script>
+  <script src="./JS/main.js"></script>
 </body>
 </html>

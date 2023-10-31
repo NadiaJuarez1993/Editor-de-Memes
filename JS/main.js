@@ -194,14 +194,31 @@ $("#transparentBackground").addEventListener("input",(e) =>{
 
 
 // ***************************************************************************//
+//Filter
+const allFiltersMeme = () => {
+    $("#image-container").style.filter = `brightness(${$("#brightness").value}) 
+    opacity(${$("#opacity").value}) 
+    contrast(${$("#contrast").value}%) 
+    blur(${$("#blur").value}px)
+    grayscale(${$("#grayscale").value}%) 
+    sepia(${$("#sepia").value}%)  
+    hue-rotate(${$("#hue-rotate").value}deg) 
+    saturate(${$("#saturation").value}%)    
+    invert(${$("#inverts").value})
+    `
+}
 
+const modImage =  (e) => {
+    if (e.target.value.length !== 0){
+    $("#image-container").style.backgroundImage = `url("${e.target.value}")`}
+}
+
+const ini = () => {
 //url image
- $("#url-image").addEventListener("input", (e) => {
-    $("#image-container").style.backgroundImage = `url(${e.target.value})`
-})
+ $("#url-image").addEventListener("input", modImage)
 
  //background
-$("#meme-background").addEventListener("input",(e) =>{
+$("#meme-background").addEventListener("input", (e) => {
     $("#image-container").style.backgroundColor = e.target.value
 })
 
@@ -210,73 +227,41 @@ $("#meme-background").addEventListener("input",(e) =>{
      $("#image-container").style.mixBlendMode = e.target.value
 })
 
-//Filter
 
-const allFiltersMeme = () =>{
-    const brightness = $("#brightness").value
-    const opacity = $("#opacity").value
-    const contrast = $("#contrast").value
-    const blur = $("#blur").value
-    const grayscale = $("#grayscale").value
-    const sepia = $("#sepia").value
-    const hue = $("#hue").value
-    const saturate = $("#saturate").value
-    const invert = $("#invert").value
-    $("#image-container").style.filter = `brightness(${brightness}) opacity(${opacity}) contrast(${contrast}%) blur(${blur}px) grayscale(${grayscale}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturate}%) invert(${invert})`
-}
 
-// const allFiltersMeme = () =>{
-//     $("#image-container").style.filter = `brightness(${$("#brightness").value})  opacity(${$("#opacity").value}) contrast(${$("#contrast").value} %) blur(${$("blur").value} px)  grayscale(${$("#grayscale").value} %)  sepia(${$("#sepia").value}%) hue-rotation(${$("#hue-rotation").value} deg) saturation(${$("#saturation").value} %) invert(${$("#invert").value})`
-// }
+$("#brightness").addEventListener("input", allFiltersMeme)
+$("#opacity").addEventListener("input", allFiltersMeme)
+$("#contrast").addEventListener("input", allFiltersMeme)
+$("#blur").addEventListener("input", allFiltersMeme)
+$("#grayscale").addEventListener("input", allFiltersMeme)
+$("#sepia").addEventListener("input", allFiltersMeme)
+$("#hue-rotate").addEventListener("input", allFiltersMeme)
+$("#saturation").addEventListener("input", allFiltersMeme)
+$("#inverts").addEventListener("input", allFiltersMeme) 
 
-// //brillo
- $("#brightness").addEventListener("input", allFiltersMeme)
 
-// //opacidad
- $("#opacity").addEventListener("input", allFiltersMeme)
-
-// //Contraste
- $("#contrast").addEventListener("input", allFiltersMeme)
-
-// //blur
- $("#blur").addEventListener("input", allFiltersMeme)
-
-// //escala de grises
- $("#grayscale").addEventListener("input", allFiltersMeme)
-
-// //sepia
- $("#sepia").addEventListener("input", allFiltersMeme)
-
-// //hue
- $("#hue-rotation").addEventListener("input", allFiltersMeme)
-
-// //saturacion
- $("#saturation").addEventListener("input", allFiltersMeme)
-
-// //negativo
- $("#invert").addEventListener("input", allFiltersMeme)
 
 //reset button
  $("#reset").addEventListener("click", () => {
       $("#brightness").value = "1"
       $("#opacity").value = "1"
-      $("#contrast").value = "100%"
-      $("#blur").value = "0px"
-      $("#grayscale").value = "0%"
-      $("#sepia").value = "0%"
-      $("#hue-rotation").value = "0deg"
-      $("#saturation").value = "100%"
-      $("#invert").value = "1"
-      $("#image-filter").style.filter = "none"
+      $("#contrast").value = "100"
+      $("#blur").value = "0"
+      $("#grayscale").value = "0"
+      $("#sepia").value = "0"
+      $("#hue-rotate").value = "0"
+      $("#saturation").value = "100"
+      $("#inverts").value = "1"
+      $("#image-container").style.filter = "none"
 
 })
 
-
+}
 // //download
 // $(".button-dowload").addEventListener("click", downloadMeme)
 
 
-
+ini()
 
 
 

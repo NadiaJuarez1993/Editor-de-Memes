@@ -11,7 +11,7 @@
     --color-title-control: rgb(33 33 33 / 70%);
     --border-radius: 3px;
     --font-primary:'Open Sans', sans-serif;
-} 
+}
 
 
 [data-theme="light-theme"] {
@@ -95,7 +95,9 @@ span {
     width: 50vw;
     background-color: black;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: contain; 
+    background-position: center;
+    
 }
 
 
@@ -145,7 +147,6 @@ p{
     height: 100vh;
     display: flex;
     flex-direction: column;
-   
     z-index: 10;
     top: 0;
     right: 0;

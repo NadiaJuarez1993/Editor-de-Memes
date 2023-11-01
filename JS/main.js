@@ -208,19 +208,13 @@ const allFiltersMeme = () => {
     `
 }
 
-const modImage =  (e) => {
-    if (e.target.value.length !== 0){
-    $("#image-container").style.backgroundImage = `url("${e.target.value}")`}
-}
 
-const ini = () => {
 //url image
- $("#url-image").addEventListener("input", modImage)
-
- //background
-$("#meme-background").addEventListener("input", (e) => {
-    $("#image-container").style.backgroundColor = e.target.value
+ $("#url-image").addEventListener("input", (e) => {
+    $("#image-container").style.backgroundImage = `url(${e.target.value})`
 })
+
+
 
 //Mix filter
  $("#mix-filters").addEventListener("input",(e) => {
@@ -256,12 +250,27 @@ $("#inverts").addEventListener("input", allFiltersMeme)
 
 })
 
-}
+ //background
+ $("#meme-background").addEventListener("input", (e) => {
+    $("#image-container").style.backgroundColor = e.target.value
+})
+
+
+//btn close aside
+$(".btn-close-image").addEventListener("click",() => {
+    $("#aside-image").style.display= "none"
+})
+
+$(".btn-close-text").addEventListener("click",() => {
+    $("#aside-text").style.display= "none"
+})
+
+
 // //download
 // $(".button-dowload").addEventListener("click", downloadMeme)
 
 
-ini()
+
 
 
 

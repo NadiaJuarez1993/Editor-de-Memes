@@ -57,6 +57,8 @@
 
   <!-- Editor de imagen-image editor -->
   <aside id="aside-image" class="aside-image"> 
+    <button class="btn-close-image">&times;</button>
+
     <h2>IMAGEN</h2>
    <section class="image-editing">
      <!-- url image -->
@@ -64,10 +66,10 @@
      
        <input type="text" name="text" id="url-image">
      <!-- background -->
-     <div class="background-image">
+     
       <h3>FONDO</h3>
          <input type="color" name="meme-background" id="meme-background">
-      </div>
+     
       <select name="" id="mix-filters">
         <option value="">Ninguno</option>
         <option value="lighten">Aclarar</option>
@@ -113,6 +115,7 @@
   
  
   <aside id="aside-text" class="aside-text">
+    <button class="btn-close-text">&times;</button>
     <h2>TEXTO</h2>
   <!-- texto sup -->
  <div>
@@ -155,10 +158,12 @@
     <button id="text-aline-center"><i class="icon fa-solid fa-align-center" ></i></button>
     <button id="text-aline-right"><i class="icon fa-solid fa-align-right" "></i></button>
   </div>
+
   <!-- color -->
   <div>
     <h3>COLOR</h3>
       <input type="color" name="color-text" id="color-text">
+
     <h3>FONDO</h3>
     <input type="color" name="color-text" id="background-color">
       <!-- fondo transparente -->

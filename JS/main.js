@@ -5,22 +5,39 @@ const $ = (selector) => document.querySelector(selector)
 //FUNCIONES
 
 //download
-// const downloadMeme =() =>{
-//     domtoimage.toBlob($(".meme-container")).then((blob) => {
-//         saveAs(blob, "my-meme.png")
-//     })
-// }
+ const downloadMeme =() =>{
+    domtoimage.toBlob($(".meme-container")).then((blob) => {
+         saveAs(blob, "my-meme.png")
+    })
+}
 
 
-// //EVENTOS
+//Filter
+const allFiltersMeme = () => {
+    $("#content-image").style.filter = `brightness(${$("#brightness").value}) 
+    opacity(${$("#opacity").value}) 
+    contrast(${$("#contrast").value}%) 
+    blur(${$("#blur").value}px)
+    grayscale(${$("#grayscale").value}%) 
+    sepia(${$("#sepia").value}%)  
+    hue-rotate(${$("#hue-rotate").value}deg) 
+    saturate(${$("#saturation").value}%)    
+    invert(${$("#inverts").value})
+    `
+}
+
+
+//EVENTOS
 
 //button and aside image-text
   $("#button--text").addEventListener("click",() =>{
-    $("#aside-text").style.width = "250px"
+    $("#aside-image").style.display = "none"
+    $("#aside-text").style.display = "block"
  })
 
    $("#button--image").addEventListener("click",() =>{
-      $("#aside-text").style.width = "0"    
+      $("#aside-text").style.display = "none" 
+      $("#aside-image").style.display = "block"   
 })
 
 
@@ -34,7 +51,7 @@ const $ = (selector) => document.querySelector(selector)
  }
      $("#lightbulb-off").classList.toggle("hidden")
     $("#lightbulb-on").classList.toggle("hidden")
- })
+})
 
 //*******************************************************//
 //text
@@ -84,28 +101,24 @@ $("#displayLowerText").addEventListener("input",(e) => {
 
 //text aline
  $("#text-aline-left").addEventListener("click",(e) =>{
-     $(".meme-top-text").style.textAlign = "left"
+     $("#content-top-text").style.textAlign = "left"
+     $("#content-down-text").style.textAlign = "left"
  })
 
- $("#text-aline-left").addEventListener("click",(e) =>{
-     $(".meme-down-text").style.textAlign = "left"
- })
-
+ 
  $("#text-aline-center").addEventListener("click",(e) =>{
      $(".meme-top-text").style.textAlign = "center"
+     $(".meme-down-text").style.textAlign = "center"
  })
 
- $("#text-aline-center").addEventListener("click",(e) =>{
-  $(".meme-down-text").style.textAlign = "center"
- })
+
 
  $("#text-aline-right").addEventListener("click",(e) =>{
      $(".meme-top-text").style.textAlign = "right"
+     $(".meme-down-text").style.textAlign = "right"
+    
  })
 
- $("#text-aline-right").addEventListener("click",(e) =>{
-     $(".meme-down-text").style.textAlign = "right"
-})
 
 
 //color text
@@ -120,40 +133,29 @@ $("#color-text").addEventListener("input",(e) =>{
 
 //background-color
 $("#background-color").addEventListener("input",(e) =>{
-    $(".meme-top-text").style.backgroundColor = e.target.value
+    $("#content-top-text").style.backgroundColor = e.target.value
 })
 
 $("#background-color").addEventListener("input",(e) =>{
-    $(".meme-down-text").style.backgroundColor = e.target.value
+    $("#content-down-text").style.backgroundColor = e.target.value
 })
 
-
-
-
-// //fondo transparente
-// $("#transparentBackground").addEventListener("input",(e) => {
-//      if(e.target.checked){
-//          $("#upper-text").style.backgroundColor = "transparent"
-//          $("#down-text").style.backgroundColor = "transparent"
-//      }else{
-//          $("#upper-text").style.backgroundColor = "white"
-//          $("#down-text").style.backgroundColor = "white"
-//     }
-// })
 
 
 //TRANPARENT
-$("#transparentBackground").addEventListener("input",(e) =>{
-    if(e.target.checked){
-         $("#upper-text").style.display ="none"
-         $("#down-text").style.display ="none"
-     } else{
-             $("#upper-text").style.display ="block"
-             $("#down-text").style.display ="block"     
-     }
+  $("#transparentBackground").addEventListener("input",(e) =>{
+      if(e.target.checked){
+         $("#content-top-text").style.backgroundColor ="transparent"
+         $("#content-down-text").style.backgroundColor ="transparent"
+       } else{
+               $("#content-top-text").style.backgroundColor= "white"
+               $("#content-down-text").style.backgroundColor = "white"
+       }
 })
 
- //outline
+
+
+//outline
  $("#outline-light").addEventListener("click",(e) =>{
      $("#upper-text").style.webkitTextStroke = "1px white"
  })
@@ -175,53 +177,34 @@ $("#transparentBackground").addEventListener("input",(e) =>{
      $("#down-text").style.webkitTextStroke = "0 black"
 })
 
-//spacing
- $("#spacing").addEventListener("input" , (e) => {
-    $("#upper-text").style.padding = `${e.target.value}px`
- })
 
- $("#spacing").addEventListener("input" , (e) => {
-     $("#down-text").style.padding = `${e.target.value}px`
- })
+//spacing
+  $("#spacing").addEventListener("input" , (e) => {
+     $("#content-top-text").style.padding = `${e.target.value}px`
+     $("#content-down-text").style.padding  = `${e.target.value}px`
+ 
+})
 
 
 //line-spacing
  $("#line-spacing").addEventListener("input" , (e) => {
      $("#upper-text").style.lineHeight = e.target.value
      $("#down-text").style.lineHeight = e.target.value
- })
+})
 
 
 
 // ***************************************************************************//
-//Filter
-const allFiltersMeme = () => {
-    $("#image-container").style.filter = `brightness(${$("#brightness").value}) 
-    opacity(${$("#opacity").value}) 
-    contrast(${$("#contrast").value}%) 
-    blur(${$("#blur").value}px)
-    grayscale(${$("#grayscale").value}%) 
-    sepia(${$("#sepia").value}%)  
-    hue-rotate(${$("#hue-rotate").value}deg) 
-    saturate(${$("#saturation").value}%)    
-    invert(${$("#inverts").value})
-    `
-}
-
-
+//image
 //url image
  $("#url-image").addEventListener("input", (e) => {
-    $("#image-container").style.backgroundImage = `url(${e.target.value})`
+    $("#content-image").style.backgroundImage = `url(${e.target.value})`
 })
-
-
 
 //Mix filter
  $("#mix-filters").addEventListener("input",(e) => {
-     $("#image-container").style.mixBlendMode = e.target.value
+     $("#content-image").style.mixBlendMode = e.target.value
 })
-
-
 
 $("#brightness").addEventListener("input", allFiltersMeme)
 $("#opacity").addEventListener("input", allFiltersMeme)
@@ -232,8 +215,6 @@ $("#sepia").addEventListener("input", allFiltersMeme)
 $("#hue-rotate").addEventListener("input", allFiltersMeme)
 $("#saturation").addEventListener("input", allFiltersMeme)
 $("#inverts").addEventListener("input", allFiltersMeme) 
-
-
 
 //reset button
  $("#reset").addEventListener("click", () => {
@@ -246,13 +227,13 @@ $("#inverts").addEventListener("input", allFiltersMeme)
       $("#hue-rotate").value = "0"
       $("#saturation").value = "100"
       $("#inverts").value = "1"
-      $("#image-container").style.filter = "none"
+      $("#content-image").style.filter = "none"
 
 })
 
- //background
+//background
  $("#meme-background").addEventListener("input", (e) => {
-    $("#image-container").style.backgroundColor = e.target.value
+    $("#content-image").style.backgroundColor = e.target.value
 })
 
 
@@ -265,9 +246,8 @@ $(".btn-close-text").addEventListener("click",() => {
     $("#aside-text").style.display= "none"
 })
 
-
-// //download
-// $(".button-dowload").addEventListener("click", downloadMeme)
+//download
+ $(".button-dowload").addEventListener("click", downloadMeme)
 
 
 

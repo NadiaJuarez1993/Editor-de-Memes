@@ -187,8 +187,7 @@ $("#reset").addEventListener("click", () => {
   $("#sepia").value = "0";
   $("#hue-rotate").value = "0";
   $("#saturation").value = "100";
-//   $("#inverts").value = "0";
-   $("#inverts").value = "1";
+  $("#inverts").value = "0";
   $("#content-image").style.filter = "none";
 });
 
